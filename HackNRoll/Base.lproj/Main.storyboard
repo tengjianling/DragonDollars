@@ -310,7 +310,7 @@
                                 </state>
                                 <connections>
                                     <action selector="feedBtnAction:" destination="Mkm-Ay-aHC" eventType="touchUpInside" id="04z-6c-6co"/>
-                                    <segue destination="B6c-yi-DdD" kind="presentation" identifier="currFoodAmt" modalPresentationStyle="fullScreen" id="IJS-CW-BZQ"/>
+                                    <segue destination="B6c-yi-DdD" kind="show" identifier="currFoodAmt" id="IJS-CW-BZQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV7-9q-772">
@@ -619,15 +619,15 @@
             <objects>
                 <viewController id="B6c-yi-DdD" customClass="FoodViewController" customModule="HackNRoll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aC6-El-C3L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled_Artwork" translatesAutoresizingMaskIntoConstraints="NO" id="Fao-4q-Oar">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ey6-aI-wJb">
-                                <rect key="frame" x="32" y="102" width="350" height="425"/>
+                                <rect key="frame" x="32" y="58" width="350" height="425"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xdV-et-LlS">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="115"/>
@@ -853,6 +853,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="IJS-CW-BZQ"/>
         <segue reference="Jnt-6i-VdK"/>
     </inferredMetricsTieBreakers>
     <resources>
