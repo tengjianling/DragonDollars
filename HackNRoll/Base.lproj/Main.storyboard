@@ -853,7 +853,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IJS-CW-BZQ"/>
         <segue reference="Jnt-6i-VdK"/>
     </inferredMetricsTieBreakers>
     <resources>

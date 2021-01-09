@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var savingsAccPINField: UITextField!
@@ -28,12 +28,29 @@ class SignUpViewController: UIViewController {
         changePlaceholderColor(textfield: internetBankingIDField, text: "Internet Banking ID")
         changePlaceholderColor(textfield: personalParticularsEmailField, text: "Email")
         changePlaceholderColor(textfield: personalParticularsPasswordField, text: "Password")
+        
+        savingsAccPINField.delegate = self
+        savingsAccIDField.delegate = self
+        internetBankingPINField.delegate = self
+        internetBankingIDField.delegate = self
+        personalParticularsPasswordField.delegate = self
+        personalParticularsEmailField.delegate = self
     }
     
     func changePlaceholderColor(textfield: UITextField, text: String) {
         textfield.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
+    func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
+        savingsAccPINField.resignFirstResponder()
+        savingsAccIDField.resignFirstResponder()
+        internetBankingPINField.resignFirstResponder()
+        internetBankingIDField.resignFirstResponder()
+        personalParticularsPasswordField.resignFirstResponder()
+        personalParticularsEmailField.resignFirstResponder()
+        
+        return true;
+    }
 
     /*
     // MARK: - Navigation
